@@ -21,6 +21,14 @@ type ViewType =
   | "work-orders"
   | "issues"
   | "pm-schedule"
+  | "rate-cards"
+  | "third-party-rentals"
+  | "hauling-transport"
+  | "telematics"
+  | "asset-lifecycle"
+  | "asset-creation" // Added Asset Creation view
+  | "financial-reconciliation" // Added Financial Reconciliation view
+  | "customer-billing" // Added Customer Billing view
   | "settings"
 
 interface NavigationProps {
@@ -51,12 +59,20 @@ const secondaryNavigation: Record<PrimarySection, { id: ViewType; label: string 
     { id: "equipment-master", label: "Equipment Master" },
     { id: "categories", label: "Categories" },
     { id: "assets", label: "Assets" },
+    { id: "asset-lifecycle", label: "Asset Lifecycle" },
+    { id: "asset-creation", label: "Asset Creation" }, // Added Asset Creation tab to Equipment section
   ],
   operations: [
     { id: "scheduling", label: "Scheduling" },
     { id: "requests", label: "Requests" },
     { id: "check-in-out", label: "Check-In/Out" },
     { id: "utilization", label: "Utilization" },
+    { id: "rate-cards", label: "Rate Cards & Billing" },
+    { id: "financial-reconciliation", label: "Financial Reconciliation" }, // Added Financial Reconciliation tab
+    { id: "customer-billing", label: "Customer Billing" }, // Added Customer Billing tab
+    { id: "third-party-rentals", label: "Third-Party Rentals" },
+    { id: "hauling-transport", label: "Hauling & Transport" },
+    { id: "telematics", label: "Telematics & Geofencing" },
   ],
   maintenance: [
     { id: "inspections", label: "Field Inspections" },

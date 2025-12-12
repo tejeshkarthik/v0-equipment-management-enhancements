@@ -18,6 +18,14 @@ import Assets from "@/components/views/assets"
 import CheckInOut from "@/components/views/check-in-out"
 import Utilization from "@/components/views/utilization"
 import PMSchedule from "@/components/views/pm-schedule"
+import RateCards from "@/components/views/rate-cards"
+import ThirdPartyRentals from "@/components/views/third-party-rentals"
+import HaulingTransport from "@/components/views/hauling-transport"
+import Telematics from "@/components/views/telematics"
+import AssetLifecycle from "@/components/views/asset-lifecycle"
+import AssetCreation from "@/components/views/asset-creation" // Import Asset Creation view
+import FinancialReconciliation from "@/components/views/financial-reconciliation" // Import Financial Reconciliation view
+import CustomerBilling from "@/components/views/customer-billing" // Import Customer Billing view
 
 type ViewType =
   | "dashboard"
@@ -35,6 +43,14 @@ type ViewType =
   | "work-orders"
   | "issues"
   | "pm-schedule"
+  | "rate-cards"
+  | "third-party-rentals"
+  | "hauling-transport"
+  | "telematics"
+  | "asset-lifecycle"
+  | "asset-creation" // Added Asset Creation view type
+  | "financial-reconciliation" // Added Financial Reconciliation view type
+  | "customer-billing" // Added Customer Billing view type
   | "settings"
 
 export default function Home() {
@@ -72,6 +88,22 @@ export default function Home() {
         return <Issues />
       case "pm-schedule":
         return <PMSchedule />
+      case "rate-cards":
+        return <RateCards />
+      case "third-party-rentals":
+        return <ThirdPartyRentals />
+      case "hauling-transport":
+        return <HaulingTransport />
+      case "telematics":
+        return <Telematics />
+      case "asset-lifecycle":
+        return <AssetLifecycle />
+      case "asset-creation": // Added Asset Creation route
+        return <AssetCreation />
+      case "financial-reconciliation": // Added Financial Reconciliation route
+        return <FinancialReconciliation />
+      case "customer-billing": // Added Customer Billing route
+        return <CustomerBilling />
       case "settings":
         return <Settings />
       default:
