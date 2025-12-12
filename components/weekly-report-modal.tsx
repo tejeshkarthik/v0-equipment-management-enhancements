@@ -217,6 +217,7 @@ export default function WeeklyReportModal({ isOpen, onClose }: WeeklyReportModal
           </DialogDescription>
         </DialogHeader>
 
+        {/* Filters */}
         <div className="flex gap-4 items-center py-4">
           <Select value={reportPeriod} onValueChange={setReportPeriod}>
             <SelectTrigger className="w-40">
@@ -254,6 +255,7 @@ export default function WeeklyReportModal({ isOpen, onClose }: WeeklyReportModal
           </Select>
         </div>
 
+        {/* Summary Cards */}
         <div className="grid grid-cols-5 gap-4">
           <div className="p-4 bg-muted rounded-lg text-center">
             <p className="text-sm text-muted-foreground">Active Assets</p>
@@ -283,6 +285,7 @@ export default function WeeklyReportModal({ isOpen, onClose }: WeeklyReportModal
           </div>
         </div>
 
+        {/* Asset Table */}
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
@@ -348,6 +351,7 @@ export default function WeeklyReportModal({ isOpen, onClose }: WeeklyReportModal
           </table>
         </div>
 
+        {/* Threshold Breaches Summary */}
         {thresholdBreaches.length > 0 && (
           <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
             <div className="flex items-center gap-2 mb-2">
@@ -365,6 +369,7 @@ export default function WeeklyReportModal({ isOpen, onClose }: WeeklyReportModal
           </div>
         )}
 
+        {/* Distribution List */}
         <div className="pt-4">
           <h3 className="font-semibold mb-3">Distribution List</h3>
           <div className="flex flex-wrap gap-3">
